@@ -4,7 +4,7 @@
 ## Overview
 This project investigates techniques for handling severe class imbalance in large-scale fraud detection using Apache Spark on Azure Databricks. Three distributed SMOTE Bagging variants are implemented and compared across performance, scalability, and partition sensitivity.
 
-**Dataset:** [Credit Card Fraud Detection — Kaggle](https://www.kaggle.com/datasets/mlgulb/creditcardfraud)  
+**Dataset:** [Credit Card Fraud Detection — Kaggle](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud)  
 284,807 transactions | 1:592 class imbalance | 30 features (PCA-transformed)
 
 ## Variants Implemented
