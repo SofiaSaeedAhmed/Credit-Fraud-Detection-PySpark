@@ -8,12 +8,14 @@ This project investigates techniques for handling severe class imbalance in larg
 284,807 transactions | 1:592 class imbalance | 30 features (PCA-transformed)
 
 ## Variants Implemented
-| Variant | Approach |
-|---|---|
-| Variant 1 | Local SMOTE Bagging (baseline) |
-| Variant 2A | Stratified Repartition via `sortBy` |
-| Variant 2B | Stratified Repartition via `mapPartitions` |
-| Variant 3 | Global Minority Broadcast SMOTEBagging |
+| Variant | Approach | Author |
+|---|---|---|
+| Variant 1 | Local SMOTE Bagging (baseline) | Mustafa Talat |
+| Variant 2A | Stratified Repartition via `sortBy` | Sofia Saeed Ahmed |
+| Variant 2B | Stratified Repartition via `mapPartitions` | Sofia Saeed Ahmed |
+| Variant 3 | Global Minority Broadcast SMOTEBagging | Umrah |
+
+Cross-variant results summary and scalability experiments also authored by Sofia Saeed Ahmed.
 
 ## Key Results
 - Best AUC-ROC: **0.98** (Variant 3)
@@ -24,12 +26,13 @@ This project investigates techniques for handling severe class imbalance in larg
 ## Tech Stack
 `PySpark` `Azure Databricks` `Scikit-learn` `SMOTE` `Pandas` `NumPy` `Matplotlib`
 
-## Structure
-fraud_detection_smote_bagging.ipynb  # Main notebook
-README.md
-
 ## How to Run
-1. Upload to Azure Databricks workspace
+1. Upload notebook to Azure Databricks workspace
 2. Download dataset from Kaggle and mount to `/mnt/your-path/creditcard.csv`
 3. Run cells sequentially — Section 2 preprocesses and saves to Parquet, subsequent sections load from there
 
+## Authors
+Group 7 — COMP4124, University of Nottingham UK  
+- Sofia Saeed Ahmed (Variant 2A, 2B, cross-variant summary)
+- Mustafa Talat (Variant 1)
+- Umrah (Variant 3)
